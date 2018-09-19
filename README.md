@@ -10,7 +10,7 @@ Note that in addition to the application, you will also need:
 3. An Arduino board and USB cable. Your instructor will provide these materials to you.
 
 ### Additional Documentation
-Instruction on how to use the simulator once it is installed are available [here](https://github.com/umdenes100/VisionSystemSim/blob/master/README.md).
+Instructions on how to use the simulator once it is installed are available [here](https://github.com/umdenes100/VisionSystemSim/blob/master/README.md).
 
 ## Windows Download and Installation Instructions
 
