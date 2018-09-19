@@ -17,7 +17,9 @@ The VisionSystemSimulator is compatible with Windows 8 and Windows 10. It has no
 
 To download the VisionSystemSimulator for Windows, first go to [this webpage](https://github.com/umdenes100/VisionSystemSimulatorInstallers/blob/master/VisionSystemSimInstaller.exe). Then click on the "Download" button.
 
-Once VisionSystemSimulator.exe has finished downloading, double click on it to run the installer. If a security warning pops up, click "More Info" and then "Run Anyways". This will open the installer window. Click through the installer, then click finish. VisionSystemSimulator is now installed on your computer. You can run it by searching for it and then double clicking on it to run the application. 
+Once VisionSystemSimulator.exe has finished downloading, double click on it to run the installer. If a security warning pops up, click "More Info" and then "Run Anyways". This will open the installer window. Click through the installer, then click finish. 
+
+VisionSystemSimulator is now installed on your computer. You can run the application by searching for it and then double clicking on it to run the application. 
 
 ## MacOS Download and Installation Instructions
 
