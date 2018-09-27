@@ -44,3 +44,7 @@ Step 3) In the window below click on the "Open Anyways" Icon if available. If th
 
 Security Options Window:
 ![alt text](./img/Security_Window.png "Security Options")
+
+## Version Control (LTF only) ##
+
+When preparing a new release for the simulator, make sure to tag the release with the new version number. This will enable notifications to students about updates.
