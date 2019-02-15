@@ -8,7 +8,7 @@ NOTE: This simulator is provided as a convinence. Even though your code may work
 - [Installation instructions](#installation-instructions)
 - [Using the Simulator](#using-the-simulator)
 - [Simulator Arduino Library](#simulator-arduino-library)
-- [Moving off the Simulator](#enes100simulation-object)
+- [Moving off the Simulator](#moving-off-the-simulator)
 
 ## Installation instructions
 
