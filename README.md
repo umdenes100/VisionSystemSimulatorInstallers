@@ -1,14 +1,20 @@
 # VisionSystemSimulator
 
-The Vision System Simulator is a tool that will provide students with an avenue to test navigation code without having access to a physical tank. The program is written in C++ and communicates with a physical arduino board over serial port to execute a navigation program which is uploaded on the arduino board. It is designed to mimic the API used for RF and tank communication which will be used later on in the course. It is also designed to current mission specifications, ensuring that the navigation code will be executed on relevant randomizations. The OSV in the simulation is designed to move and look like the tanks provided by the course for testing. 
+The Vision System Simulator is a tool that will provide students with an avenue to test navigation code without having access to a physical tank. The program communicates with a physical arduino board over USB to execute the navigation program uploaded on the arduino board. It is designed to mimic the API used for RF and tank communication which will be used later on in the course. It is also designed to current mission specifications, ensuring that the navigation code will be executed on relevant randomizations. The OSV in the simulation is designed to move and look like the tanks provided by the course for testing. 
 
 NOTE: This simulator is provided as a convinence. Even though your code may work on the simulator, that does not nessesarily imply that the code will work on an actual OSV.
+
+## Table of Contents
+- [Installation instructions](#installation-instructions)
+- [Using the Simulator](#using-the-simulator)
+- [Simulator Arduino Library](#simulator-arduino-library)
+- [Moving off the Simulator](#enes100simulation-object)
 
 ## Installation instructions
 
 ### Additional Requirements
 
-Note that in addition to the application, you will also need:
+In addition to the simulator application, you will also need:
 1. The Arduino IDE, available [here](https://www.arduino.cc/en/Main/Software#download). Follow the instructions on the website to download the IDE.
 2. The Arduino Library that interfaces with the simulator. You will use this library to control the simulated OSV. It comes with an example sketch to get you started. To download the library, go to [this Github repository](https://github.com/umdenes100/SimulatorArduinoLibrary) and click on the green button that says 'Clone or Download', then click 'Download ZIP'.  Open the Arduino IDE and install the library by going to Sketch > Include Library > Add .ZIP Library and selecting the downloaded file.
 3. An Arduino board and USB cable. Your instructor will provide these materials to you.
@@ -26,7 +32,7 @@ To download the VisionSystemSimulator for Windows, first go to [this webpage](ht
 
 Once VisionSystemSimulator.exe has finished downloading, double click on it to run the installer. If a security warning pops up, click "More Info" and then "Run Anyways". This will open the installer window. Click through the installer, then click finish. 
 
-VisionSystemSimulator is now installed on your computer. You can run the application by searching for it and then double clicking on it to run the application. 
+The Simulator is now installed on your computer. You can run the application by searching for it and then double clicking on it to run the application. 
 
 ### MacOS Download and Installation Instructions
 
@@ -34,7 +40,7 @@ The VisionSystemSimulator is built to work on any MacOS 10.5 and onward.
 
 To download this Installer onto your Mac, begin by double clicking the VisionSystemSim.dmg file. This will open a new window, continue by double clicking on the application. 
 
-Note: Often on Mac machines a security warning will appear prompting further attention. So resolve this follow the steps below.
+Note: Sometimes a security warning will appear prompting further attention. So resolve this follow the steps below.
 
 Security Warning Message:
 ![alt text](./img/Security_Warning.png "Security Warning Message")
@@ -52,20 +58,41 @@ Security Options Window:
 ![alt text](./img/Security_Window.png "Security Options")
 
 ## Using the simulator
+
+### Getting Started
 Follow these steps to run the example sketch on the simulator: 
-1. First, you will need to upload navigation code to the Arduino board. You can open the example sketch by opening the Arduino IDE and going to File > Examples > DFRTankSimulation > navigation_example
-2. Now, upload this code to the Arduino board. Your instructor or TA will show you how to do this in class.
+1. First, you will need to upload navigation code to the Arduino board. To upload the example sketch, open the Arduino IDE and go to File > Examples > DFRTankSimulation > navigation_example
+2. Now, upload the sketch to the Arduino board. Your instructor or TA will show you how to do this in class.
 3. Open the simulator by locating it in your computer and double clicking it. It should be in your start menu, but you can also locate it by searching for 'VisionSystemSim'
 4. Once the simulator is open, enable all of the distance sensors that your code will be using by opening the 'Edit OSV' window and clicking on each sensor referenced in the example code (the example sketch only uses sensor 1, but you can use more in your navigation code) to toggle it on.
-5. Now, click on 'Select Port' and then click on the port your Arduino is connected to.
+5. If you want to edit the length and width of the OSV, you can do that in the OSV window by dragging the sliders up or down. 
+6. Click on 'Select Port' and then click on the port the Arduino is connected to.
 
-The simulated OSV will now execute the navigation code that was uploaded to it. If you want to re-run the navigation, unplug the Arduino, click 'Reset', plug the Arduino back in, and reselect the port. 
 
-If you want to run the navigation again but with a different obstacle randomization, unplug the Arduino, click 'Randomize', plug the Arduino back in, and reselect the port. 
+### Rerunning the simulation with the same code
+If you want to re-run the navigation, follow these steps:
+1. Click the 'Clear' button next to the 'Select Port' box to disconnect the Arduino from the Simulator. 
+2. Reset the Arduino by clicking the reset button on the board or by unplugging and replugging the cable. 
+3. Click 'Reset' to move the OSV back to it's starting location, or click 'Randomize' to reset the OSV and generate a new obstacle randomization.
+4. Click on 'Select Port' and then click on the port the Arduino is connected to.
 
-If you want to test different code on the simulator, you must first disconnect the arduino from the simulator so the arduino IDE can access the arduino port. This can be done by either unplugging the arduino from the computer, or by closing the simulator. Then, upload the new code to the arduino and reselect the arduino port on the simulator. 
 
-## Simulator Library
+### Rerunning the simulation with new code
+If you want to re-run the navigation, follow these steps:
+1. Click the 'Clear' button next to the 'Select Port' box to disconnect the Arduino from the Simulator. 
+2. Upload the new navigation sketch from the Arduino IDE
+3. Click 'Reset' to move the OSV back to it's starting location, or click 'Randomize' to reset the OSV and generate a new obstacle randomization.
+4. Click on 'Select Port' and then click on the port the Arduino is connected to.
+
+
+### Simulation Options
+- **Obstacles** - The obstacles can be enabled or disabled on the left side by selecting 'on' or 'off'
+- **Communication** - The communcation can be changed by selecting 'ideal' or 'realistic'
+	- **Ideal** - Ideal communication means the Arduino and the simulator communicate as fast as possible (about 30ms) when `Enes100Simulation.updateLocation()` is called.
+	- **Realistic** - Realistic communication means the simulator will attempt to model as closely as possible how OSV's communicate with the actual Vision System. `Enes100Simulation.updateLocation()` will take 140ms on average, and will fail sometimes. 
+
+
+## Simulator Arduino Library
 
 ### DFRTankSimulation Object
 
@@ -112,5 +139,3 @@ If you wish to take your simulator code and move it onto the physical tanks, the
 Once you have completed these steps, you should be able to upload your navigation code to a physical tank. 
 
 WARNING: Even though your code may work on the simulator, that does not nessesarily guarantee that it will work in real life. The simulator is meant to serve as a tool to assist in the programming process and is not 100% indicative of real life conditions. To ensure that your code will work on your osv, you will need to test in the real world.
-
-## FAQs
