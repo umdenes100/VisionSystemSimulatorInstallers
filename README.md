@@ -103,10 +103,10 @@ The functions associated with the DFRTankSimulation object control the movement 
 This function simply stops the OSV by setting both motor PWM's to zero.
 
 
-`void setRightMotorPWM()`
+`void setRightMotorPWM(int pwm)`
 This function sets the PWM of the tank's right motor. It accepts one argument (an integer), which should be in the range [-255, 255]
 
-`void setLeftMotorPWM()`
+`void setLeftMotorPWM(int pwm)`
 This function sets the PWM of the tank's left motor. It accepts one argument (an integer), which should be in the range [-255, 255]
 
 
@@ -124,17 +124,18 @@ This function communicates with the simulator to retrieve the current OSV locati
 
 
 `float readDistanceSensor(int sensorIndex)`
-This function reads the distance sensor on the simulator OSV and returns the distance as a float. The sensor index is a number from 0-11 as defined in the simulator 'Edit OSV' form.
+This function reads the distance sensor on the simulator OSV and returns the distance as a float. The sensor index is a number from 0-11 as defined in the simulator 'Edit OSV' window. Note that you can **only** use a distance sensor if it has been enabled in the 'Edit OSV' window. Otherwise, it will return 0 regardless of how close obstacles are. Also note that the distance sensors will sense obstacles but not the destination or walls. 
 
 
 `void print(msg), void println(msg)`
 These functions are print messages to the console. These functions may be helping in debugging your code. 
 
+
 ## Moving off of the simulator
 If you wish to take your simulator code and move it onto the physical tanks, there are a few basic steps to follow:
-1. Replace all instances of DFRTankSimulation and Enes100Simulation in your code with DFRTank and Enes100 respectively.
-2. Locate the line in which you create the Enes100 object and add the appropriate arguments. For more information on how to do this follow [this](https://github.com/umdenes100/Enes100ArduinoLibrary) link.
-3. re-implement the distance sensor function on your own.
+1. Replace all instances of TankSimulation and Enes100Simulation in your code with Tank and Enes100 respectively 
+2. Locate the line that calls `Enes100.begin()` and add the appropriate arguments. For more information on how to do this follow [this](https://github.com/umdenes100/Enes100ArduinoLibrary) link.
+3. Re-implement the function `readDistanceSensor()` on your own. This function is not provided in the Enes100 library. 
 
 Once you have completed these steps, you should be able to upload your navigation code to a physical tank. 
 
