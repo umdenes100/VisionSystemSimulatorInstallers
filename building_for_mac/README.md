@@ -8,7 +8,7 @@ If you're in the latter category, I understand that things might look bleak, but
 
 If you have a Macintosh computer, get rid of your Macintosh computer. While they are excellent devices, it means that you're now a target for this very activity. 
 
-I recommend two alternatives - the first is to purchase a Windows machine and develop the grit that can only come of your kind being considered inferior, and being unsupported by every library under the Sun. The second is to purchase a cheap Lenovo computer, install some kind of complicated Linux distro - Arch Linux or Gentoo come to mind (turtleneck and tortoise-shell glasses sold separately), and then go use Windows in the library. These will both provide sufficient hipster programmer cred and more importantly, will save you from the plight of building Qt applications for Mac.
+I recommend two alternatives - the first is to purchase a Windows machine and develop the grit that can only come of your kind being considered inferior, and being unsupported by every package under the Sun. The second is to purchase a cheap Lenovo computer, install some kind of complicated Linux distro - Arch Linux or Gentoo come to mind (turtleneck and tortoise-shell glasses sold separately), and then go use Windows in the library. These will both provide sufficient hipster programmer cred and more importantly, will save you from the plight of building Qt applications for Mac.
 
 So why is building a Qt application for Macintosh so complicated? Well, the general answer is that the biggest problem a Mac developer suffers from is the 'not quite Linux' problem. You see, if you're developing cross-platform, you know you're going to need to hire some full time .NET developers to port native to Windows. You resign yourself to that fate and get the job done pretty well. However, when it comes to Macs, you simply shrug, utter the phrase "Eh Macs are UNIX it'll probably work fine" and cast the blasted activity aside entirely.
 
@@ -52,7 +52,7 @@ This thing is a real kick in the pants when you first see it, but it's easy enou
 
 Now, the next step is important. It's going to ask you to select an installation location. Make sure you remember this. I'm going to use the default directory - 
 
-/Users/<USERNAME>/Qt. I will refer to whatever installation location you choose as QT_DIRECTORY. This will come up again later in the installation.
+`/Users/<USERNAME>/Qt`. I will refer to whatever installation location you choose as QT_DIRECTORY. This will come up again later in the installation.
 
 ## Verifying that the Simulator Works
 
