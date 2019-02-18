@@ -52,7 +52,7 @@ This thing is a real kick in the pants when you first see it, but it's easy enou
 
 Now, the next step is important. It's going to ask you to select an installation location. Make sure you remember this. I'm going to use the default directory - 
 
-/Users/< USERNAME >/Qt. I will refer to whatever installation location you choose as QT_DIRECTORY. This will come up again later in the installation.
+`/Users/<USERNAME>/Qt`. I will refer to whatever installation location you choose as QT_DIRECTORY. This will come up again later in the installation.
 
 ## Verifying that the Simulator Works
 
