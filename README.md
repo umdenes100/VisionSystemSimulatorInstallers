@@ -22,7 +22,7 @@ In addition to the simulator application, you will also need:
 ### Youtube Video explaining download and installation instructions
 This video shows how to download and install the simulator. The steps are also outlined below. Click on the thumbnail to be redirected to the Youtube video, or follow the steps listed below the thumbnail.
 
-[![Alt text](https://www.youtube.com/watch?v=AihF7YBAHrc)
+[![Alt text](https://img.youtube.com/vi/AihF7YBAHrc/0.jpg)](https://www.youtube.com/watch?v=AihF7YBAHrc)
 
 ### Windows Download and Installation Instructions
 
