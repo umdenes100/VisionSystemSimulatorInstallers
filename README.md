@@ -48,7 +48,7 @@ Security Warning Message:
 Step 1) Open the general settings window.
 
 General Settings Window:
-![alt text](https://raw.githubusercontent.com/umdenes100/VisionSystemSimulatorInstallers/blob/master/img/General_Settings.png "General Settings")
+![alt text](https://raw.githubusercontent.com/umdenes100/VisionSystemSimulatorInstallers/master/img/General_Settings.png "General Settings")
 
 Step 2) Click onto the "Security & Privacy" icon.
 
