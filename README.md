@@ -28,7 +28,7 @@ This video shows how to download and install the simulator. The steps are also o
 
 The VisionSystemSimulator is compatible with Windows 8 and Windows 10. It has not been tested for Windows 7 or previous versions.
 
-To download the VisionSystemSimulator for Windows, first go to [this webpage](https://github.com/umdenes100/VisionSystemSimulatorInstallers/blob/master/VisionSystemSimInstaller.exe). Then click on the "Download" button.
+To download the VisionSystemSimulator for Windows, first go to [this webpage](http://enes100.umd.edu/simulator/). Then click on "Windows Download".
 
 Once VisionSystemSimulator.exe has finished downloading, double click on it to run the installer. If a security warning pops up, click "More Info" and then "Run Anyways". This will open the installer window. Click through the installer, then click finish. 
 
@@ -38,7 +38,9 @@ The Simulator is now installed on your computer. You can run the application by 
 
 The VisionSystemSimulator is built to work on any MacOS 10.5 and onward.
 
-To download this Installer onto your Mac, begin by double clicking the VisionSystemSim.dmg file. This will open a new window, continue by double clicking on the application. 
+To download the VisionSystemSimulator for MacOS, first go to [this webpage](http://enes100.umd.edu/simulator/). Then click on "Mac Download".
+
+Once VisionSystemSimulator.exe has finished downloading, double click on it to run the installer.
 
 Note: Sometimes a security warning will appear prompting further attention. So resolve this follow the steps below.
 
