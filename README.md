@@ -117,19 +117,23 @@ This function sets the PWM of the tank's left motor. It accepts one argument (an
 The functions associated with the Enes100Simulation object provide information about the OSV's location, destination, and distance sensor readings. They also allow print messages to be sent to the console for debugging purposes. 
 
 
-`bool retrieveDestination()`
+`bool begin()`
+
 This function retrieves the destination for the current run from the simulator, stores the destination in the destination variable, and returns true or false depending on the success of the call. This function should be encapsulated in a while loop to ensure that the OSV has retrieved the destination before begining the run.
 
 
 `bool updateLocation()`
+
 This function communicates with the simulator to retrieve the current OSV location and updates the location variable in the object. It returns true or false depending on the success of the call.
 
 
 `float readDistanceSensor(int sensorIndex)`
-This function reads the distance sensor on the simulator OSV and returns the distance as a float. The sensor index is a number from 0-11 as defined in the simulator 'Edit OSV' window. Note that you can **only** use a distance sensor if it has been enabled in the 'Edit OSV' window. Otherwise, it will return 0 regardless of how close obstacles are. Also note that the distance sensors will sense obstacles but not the destination or walls. 
+
+This function reads the distance sensor on the simulator OSV and returns the distance as a float. The sensor index is a number from 0-11 as defined in the simulator 'Edit OSV' form.
 
 
 `void print(msg), void println(msg)`
+
 These functions are print messages to the console. These functions may be helping in debugging your code. 
 
 
